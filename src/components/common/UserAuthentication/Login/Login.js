@@ -3,7 +3,7 @@ import { Card, Col, Container, Row, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useHistory, useLocation, NavLink } from "react-router-dom";
 import useAuth from "../../../../hooks/useAuth";
-import logo from "../../../../images/logo2.png";
+import logo from "../../../../images/logo.png";
 
 
 
@@ -63,8 +63,8 @@ const Login = () => {
       <Row>
         <Col xs={12} md={4} className="mx-auto">
           <Card className="shadow">
-            <Card.Img className="img-fluid" variant="top" src={logo} />
-            <Card.Title className="mx-auto">Login Please</Card.Title>
+           
+            <Card.Title className="mx-auto my-5"> <span className="orange">Login Please</span> </Card.Title>
             <Card.Body>
               <form onSubmit={handleSubmit(onSubmit)}>
                 <label className=" mb-2">Email</label>
@@ -81,7 +81,7 @@ const Login = () => {
 
                 <input
                   style={{ width: "100%" }}
-                  className="btn btn-outline-info mt-3 mb-3"
+                  className="btn btn-outline-danger orange mt-3 mb-3"
                   type="submit"
                   value="Login"
                 />
@@ -93,7 +93,7 @@ const Login = () => {
               >
                 Continue with Google
               </Button>{" "}
-              <NavLink className="mx-auto text-danger" to="/register">
+              <NavLink className="mx-auto orange" to="/register">
                 New User?
               </NavLink>
             </Card.Body>

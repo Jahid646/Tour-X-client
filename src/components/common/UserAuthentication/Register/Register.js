@@ -62,8 +62,7 @@ const Register = () => {
       <Row>
         <Col xs={12} md={4} className="mx-auto">
           <Card className="shadow">
-            <Card.Img className="img-fluid" variant="top" src={logo} />
-            <Card.Title className="mx-auto">Signup Please</Card.Title>
+            <Card.Title className="mx-auto"> <span className="orange">Signup Please</span> </Card.Title>
             <Card.Body>
               <form onSubmit={handleSubmit(onSubmit)}>
                 <label className=" mb-2 ">Name</label>
@@ -81,7 +80,7 @@ const Register = () => {
 
                 <input
                   style={{ width: "100%" }}
-                  className="btn btn-outline-info mt-3 mb-3"
+                  className="btn btn-outline-danger orange mt-3 mb-3"
                   type="submit"
                   value="Signup"
                 />
@@ -94,7 +93,7 @@ const Register = () => {
                 Continue with Google
               </Button>{" "}
               <br />
-              <NavLink className="mx-auto text-danger" to="/login">
+              <NavLink className="mx-auto orange" to="/login">
                 Already have an account?
               </NavLink>
             </Card.Body>

@@ -10,6 +10,8 @@ import ManageAllOrders from './components/ManageAllOrders/ManageAllOrders';
 import NotFound from './components/NotFound/NotFound';
 import Login from './components/common/UserAuthentication/Login/Login';
 import Register from './components/common/UserAuthentication/Register/Register';
+import OfferDetails from './components/common/OfferDetails/OfferDetails';
+import AddNewOffer from './components/AddNewOffer/AddNewOffer';
 
 function App() {
   return (
@@ -32,6 +34,10 @@ function App() {
             <ManageAllOrders></ManageAllOrders>
           </PrivateRoute>
 
+          <PrivateRoute path="/addOffer">
+            <AddNewOffer></AddNewOffer>
+          </PrivateRoute>
+
           <Route path="/login">
             <Login></Login>
           </Route>
@@ -39,7 +45,7 @@ function App() {
            <Register></Register>
           </Route>
           <PrivateRoute path="/offer/:id">
-            
+            <OfferDetails></OfferDetails>
           </PrivateRoute>
           <Route path="*">
             <NotFound></NotFound>

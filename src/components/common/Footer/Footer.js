@@ -10,17 +10,15 @@ const Footer = () => {
              <div className="mt-3">
       <Container
         fluid
-        className="bg-info d-flex justify-content-between align-items-center"
+        className="bg-dark d-flex justify-content-between align-items-center"
       >
-        <img className="" height="100" src={logo} alt="" />
+        <img height="70" className="p-3" src={logo} alt="" />
 
-        <h2 className="text-white">
-          We Offer Quality Full and Affordable Service For You.
-        </h2>
+        
       </Container>
 
       <Container fluid className="pt-5 bg-dark">
-        <Row className="pb-5"> <Col xs={12} md={4} sm={12} className="text-white text-center pt-4">
+        <Row className="pb-5"> <Col xs={12} md={4} sm={12} className="orange text-center pt-4">
             <p className="mb-1">About </p> 
             <p className="mb-1">Our Blog</p>  
             <p className="mb-1">Get Helps</p> 
@@ -30,11 +28,11 @@ const Footer = () => {
           <Col xs={12} md={4} sm={12} className="mx-auto">
             <Form className="d-flex mx-auto justify-content-center align-items-center text-white">
               <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Subscribe for regular update.</Form.Label>
+                <Form.Label> <span className="orange">Subscribe for regular update.</span> </Form.Label>
                 <div className="d-flex">
                   <Form.Control type="email" placeholder="Enter email" />
 
-                  <Button onClick={handleShow} variant="outline-success" type="submit">
+                  <Button onClick={handleShow} variant="outline-secondary" className="orange" type="submit">
                     Subscribe
                   </Button>
                 </div>
@@ -43,7 +41,7 @@ const Footer = () => {
           </Col>
          
 
-          <Col xs={12} md={4} sm={12} className="text-white text-center d-flex justify-content-center align-items-center p-5 pt-4">
+          <Col xs={12} md={4} sm={12} className="orange text-center d-flex justify-content-center align-items-center p-5 pt-4">
             <i className="fab fa-facebook-f p-2 m-2 border "></i>
             <i className="fab fa-instagram p-2 m-2 border" ></i>
             <i className="fab fa-google-plus-g p-2 m-2 border"></i>
@@ -53,7 +51,7 @@ const Footer = () => {
         <Row className="pt-5 pb-3 text-center">
           <Col>
             <small className="text-muted">
-              Copyright &copy; 2021 E-health Hospital Jahid Hasan All right reserved
+              Copyright &copy; 2021 Tour-X Jahid Hasan All right reserved
             </small>
           </Col>
         </Row>
