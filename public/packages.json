@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Paris Hill Tour",
+        "price": "300",
+        "description": "This package for 5 days and 6 night and price shoed for one person.",
+        "img": "https://i.ibb.co/RYjCV2q/1.png"
+    },
+    {
+        "id": 2,
+        "name": "Lake Garda, Italy",
+        "price": "280",
+        "description": "LThis package for 5 days and 6 night and price shoed for one person.",
+        "img": "https://i.ibb.co/PjzpwbG/2.png"
+    },
+    {
+        "id": 3,
+        "name": "Mount Dtna, Italyr",
+        "price": "150",
+        "description": "This package for 3 days and 4 night and price shoed for one person.",
+        "img": "https://i.ibb.co/vL4qZkn/3.png"
+    },
+    {
+        "id": 4,
+        "name": "Amalfi Costa, Italy",
+        "price": "300",
+        "description": "This package for 5 days and 6 night and price shoed for one person.",
+        "img": "https://i.ibb.co/GPn3N1R/4.png"
+    },
+    {
+        "id": 5,
+        "name": "French Rivira, France",
+        "price": "240",
+        "description": "This package for 4 days and 5 night and price shoed for one person.",
+        "img": "https://i.ibb.co/Qc6TCKR/5.png"
+    },
+    {
+        "id": 6,
+        "name": "Lake Geneva, France",
+        "price": "145",
+        "description": "This package for 3 days and 4 night and price shoed for one person.",
+        "img": "https://i.ibb.co/cXT1gwm/6.png"
+    }
+]
