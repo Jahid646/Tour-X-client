@@ -91,7 +91,7 @@ const Login = () => {
                 variant="outline-success rounded-pill mb-3"
                 style={{ width: "100%" }}
               >
-               <i class="fab fa-google p-2"></i> Continue with Google
+               <i className="fab fa-google p-2"></i> Continue with Google
               </Button>{" "}
               <NavLink className="mx-auto orange" to="/register">
                 New User?

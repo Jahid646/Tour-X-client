@@ -96,7 +96,7 @@ const Register = () => {
                 variant="outline-success rounded-pill mb-3"
                 style={{ width: "100%" }}
               >
-               <i class="fab fa-google p-2"></i> Continue with Google
+               <i className="fab fa-google p-2"></i> Continue with Google
               </Button>{" "}
               <br />
               <NavLink className="mx-auto orange" to="/login">

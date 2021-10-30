@@ -45,16 +45,16 @@ const Header = () => {
               {user.email
                 ? [
 
-                  <NavLink className="nav-link" to="/myOrder">
+                  <NavLink key="myOrder" className="nav-link" to="/myOrder">
                     My Order
                   </NavLink>
                   ,
     
-                  <NavLink className="nav-link" to="/manageAllOrders">
+                  <NavLink key="manageOrder" className="nav-link" to="/manageAllOrders">
                     Manage All Orders
                   </NavLink>
                   ,
-                  <NavLink className="nav-link" to="/addOffer">
+                  <NavLink key="addOffer" className="nav-link" to="/addOffer">
                     Add Offer
                   </NavLink>,
                     <p key={user.email} className="mt-2 mx-3 mb-lg-0 mb-3">
@@ -67,14 +67,14 @@ const Header = () => {
                       className="rounded-pill btn-dark orange"
                       variant="outline-danger"
                     >
-                      Logout<i class="fas fa-sign-out-alt"></i>
+                      Logout<i className="fas fa-sign-out-alt"></i>
                     </Button>,
                     
                   ]
                 : [
                     <NavLink className="nav-link" to="/login" key="loginkey">
                       {" "}
-                      <i class="fas fa-sign-in-alt"></i> Login
+                      <i className="fas fa-sign-in-alt"></i> Login
                     </NavLink>,
                     <NavLink
                       

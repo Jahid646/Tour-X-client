@@ -80,6 +80,8 @@ const OfferDetails = () => {
               </Row>
             </Card>
           </Col>
+
+          {/* User Form  */}
           <Col md={6}>
           <div className="mt-2">
           <form className="shipping-form" onSubmit={handleSubmit(onSubmit)}>

@@ -17,7 +17,7 @@ const TravelerSay = () => {
         <Card.Body className="text-center">
           <Card.Title> <span className="orange">Alizabeth Turner</span> </Card.Title>
          
-          <Card.Text style={{ textAlign: "justify" }}><em className="text-muted"> <i class="fas fa-quote-left"></i> Really very good experience with them!<i class="fas fa-quote-right p-2"></i>  </em></Card.Text>
+          <Card.Text style={{ textAlign: "justify" }}><em className="text-muted"> <i className="fas fa-quote-left"></i> Really very good experience with them!<i className="fas fa-quote-right p-2"></i>  </em></Card.Text>
         </Card.Body>
         
        
@@ -30,7 +30,7 @@ const TravelerSay = () => {
         <Card.Body className="text-center">
           <Card.Title > <span className="orange">Zunayed Jomsher</span> </Card.Title>
          
-          <Card.Text style={{ textAlign: "justify" }}><em className="text-muted"> <i class="fas fa-quote-left"></i> Very trustworthy service and Really enjoy it! <i class="fas fa-quote-right p-2"></i> </em></Card.Text>
+          <Card.Text style={{ textAlign: "justify" }}><em className="text-muted"> <i className="fas fa-quote-left"></i> Very trustworthy service and Really enjoy it! <i className="fas fa-quote-right p-2"></i> </em></Card.Text>
           
         </Card.Body>
         
@@ -44,7 +44,7 @@ const TravelerSay = () => {
         <Card.Body className="text-center">
           <Card.Title><span className="orange">Captain Barbosa</span> </Card.Title>
           
-          <Card.Text style={{ textAlign: "justify" }}><em className="text-muted"> <i class="fas fa-quote-left"></i> Their services and offers are so enjoyable!<i class="fas fa-quote-right p-2"></i>  </em></Card.Text>
+          <Card.Text style={{ textAlign: "justify" }}><em className="text-muted"> <i className="fas fa-quote-left"></i> Their services and offers are so enjoyable!<i className="fas fa-quote-right p-2"></i>  </em></Card.Text>
           
         </Card.Body>
         
