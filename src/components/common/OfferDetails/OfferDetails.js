@@ -1,32 +1,63 @@
-import React, { useEffect, useState } from 'react';
-import { Card, Col, Container, Row, Button, Modal } from 'react-bootstrap';
-import { useParams } from 'react-router';
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { Card, Col, Container, Row, Button, Modal } from "react-bootstrap";
+import { useForm } from "react-hook-form";
+import { useParams } from "react-router";
+import useAuth from "../../../hooks/useAuth";
 
-
-// This is Private route 
+// This is Private route
 const OfferDetails = () => {
-    const { id } = useParams();
+  const { id } = useParams();
   const [singleOffer, setSingleOffer] = useState({});
   const { name, img, price, description } = singleOffer;
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+
   useEffect(() => {
-    fetch("https://raw.githubusercontent.com/Jahid646/user-json-files/main/offers.json")
+    fetch(
+      `http://localhost:5000/offers/${id}`
+    )
       .then((res) => res.json())
       .then((data) =>
-        setSingleOffer(data.find((offe) => offe.id === parseInt(id)))
+        setSingleOffer(data)
       );
-  }, [id]);
+  }, []);
 
-  const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
   // const u= JSON.stringify(localStorage.getItem('user'))
 
-    return (
-        <>
-        <Container className="py-5">
+  const { user } = useAuth();
+
+  const onSubmit = (data) => {
+    data.offer = singleOffer;
+    data.uid = user.uid;
+    fetch("http://localhost:5000/orders", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.insertedId) {
+          alert("Order Processed Successfully");
+          reset();
+        }
+      });
+
+    console.log(data);
+  };
+
+  return (
+    <>
+      <Container className="py-5">
         <Row>
-          <Col md={3}></Col>
+          {/* <Col md={3}></Col> */}
           <Col md={6}>
             <Card className="shadow border-0 p-3">
               <Row>
@@ -37,12 +68,6 @@ const OfferDetails = () => {
                     <Card.Text className="fs-1 orange fw-bold">
                       $ <span id="">{price}</span>
                     </Card.Text>
-                    <div className="">
-                      <div className="d-flex justify-content-start align-items-center">
-                       <Button onClick={handleShow} variant="outline-success orange"> Procceed</Button>
-                      </div>
-                    </div>
-                  
                   </Card.Body>
                 </Col>
                 <Col
@@ -55,24 +80,49 @@ const OfferDetails = () => {
               </Row>
             </Card>
           </Col>
-          <Col md={3}></Col>
+          <Col md={6}>
+          <div className="mt-2">
+          <form className="shipping-form" onSubmit={handleSubmit(onSubmit)}>
+              <input className="m-2" defaultValue={user.displayName} {...register("name")} />
+              <br />
+              <input className="m-2"
+                defaultValue={user.email}
+                {...register("email", { required: true })}
+              />{" "}
+              <br />
+              {errors.email && (
+                <span className="error">This field is required</span>
+              )}
+              <input className="m-2"
+                placeholder="Address"
+                defaultValue=""
+                {...register("address")}
+              />
+              <br />
+              <input className="m-2"
+                placeholder="City"
+                defaultValue=""
+                {...register("city")}
+              />{" "}
+              <br />
+              <input className="m-2"
+                placeholder="phone number"
+                defaultValue=""
+                {...register("phone")}
+              />{" "}
+              <br />
+              <input className="btn btn-outline-danger orange m-2" type="submit" value="Place Order" />
+            </form>
+          </div>
+          </Col>
         </Row>
       </Container>
 
-      {/* Modal  */}
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Thanks For Order</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>We will contact you soon.</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-        </Modal.Footer>
-      </Modal>
-      </>
-    );
+      <Container>
+        <div className="d-flex "></div>
+      </Container>
+    </>
+  );
 };
 
 export default OfferDetails;

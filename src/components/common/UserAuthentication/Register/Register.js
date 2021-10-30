@@ -62,8 +62,14 @@ const Register = () => {
       <Row>
         <Col xs={12} md={4} className="mx-auto">
           <Card className="shadow">
-            <Card.Title className="mx-auto"> <span className="orange">Signup Please</span> </Card.Title>
+            <Card.Title className="mx-auto py-4">
+              <h2>Tour<span className="orange">X</span></h2>
+              
+              
+              </Card.Title>
+
             <Card.Body>
+              
               <form onSubmit={handleSubmit(onSubmit)}>
                 <label className=" mb-2 ">Name</label>
                 <input className="form-control" {...register("name")} />
@@ -80,17 +86,17 @@ const Register = () => {
 
                 <input
                   style={{ width: "100%" }}
-                  className="btn btn-outline-danger orange mt-3 mb-3"
+                  className="btn btn-outline-danger rounded-pill orange mt-3 mb-3"
                   type="submit"
                   value="Signup"
                 />
               </form>
               <Button
                 onClick={handleSignInBtnClick}
-                variant="outline-success mb-3"
+                variant="outline-success rounded-pill mb-3"
                 style={{ width: "100%" }}
               >
-                Continue with Google
+               <i class="fab fa-google p-2"></i> Continue with Google
               </Button>{" "}
               <br />
               <NavLink className="mx-auto orange" to="/login">

@@ -32,7 +32,7 @@ const Footer = () => {
                 <div className="d-flex">
                   <Form.Control type="email" placeholder="Enter email" />
 
-                  <Button onClick={handleShow} variant="outline-secondary" className="orange" type="submit">
+                  <Button onClick={handleShow} variant="outline-danger" className="orange" type="submit">
                     Subscribe
                   </Button>
                 </div>
@@ -42,9 +42,9 @@ const Footer = () => {
          
 
           <Col xs={12} md={4} sm={12} className="orange text-center d-flex justify-content-center align-items-center p-5 pt-4">
-            <i className="fab fa-facebook-f p-2 m-2 border "></i>
-            <i className="fab fa-instagram p-2 m-2 border" ></i>
-            <i className="fab fa-google-plus-g p-2 m-2 border"></i>
+            <i className="fab fa-facebook-f p-2 m-2 border border-danger "></i>
+            <i className="fab fa-instagram p-2 m-2 border border-danger" ></i>
+            <i className="fab fa-google-plus-g p-2 m-2 border border-danger"></i>
            
           </Col>
         </Row>

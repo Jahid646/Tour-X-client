@@ -64,7 +64,7 @@ const Login = () => {
         <Col xs={12} md={4} className="mx-auto">
           <Card className="shadow">
            
-            <Card.Title className="mx-auto my-5"> <span className="orange">Login Please</span> </Card.Title>
+            <Card.Title className="mx-auto my-5">Tour<span className="orange">X</span> </Card.Title>
             <Card.Body>
               <form onSubmit={handleSubmit(onSubmit)}>
                 <label className=" mb-2">Email</label>
@@ -81,17 +81,17 @@ const Login = () => {
 
                 <input
                   style={{ width: "100%" }}
-                  className="btn btn-outline-danger orange mt-3 mb-3"
+                  className="btn btn-outline-danger rounded-pill orange mt-3 mb-3"
                   type="submit"
                   value="Login"
                 />
               </form>
               <Button
                 onClick={handleSignIn}
-                variant="outline-success mb-3"
+                variant="outline-success rounded-pill mb-3"
                 style={{ width: "100%" }}
               >
-                Continue with Google
+               <i class="fab fa-google p-2"></i> Continue with Google
               </Button>{" "}
               <NavLink className="mx-auto orange" to="/register">
                 New User?

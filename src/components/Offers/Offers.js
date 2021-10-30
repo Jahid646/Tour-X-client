@@ -6,7 +6,7 @@ import Offer from "../Offer/Offer";
 const Offers = () => {
   const [offers, setOffers] = useState([]);
   useEffect(() => {
-    fetch("https://raw.githubusercontent.com/Jahid646/user-json-files/main/offers.json")
+    fetch("http://localhost:5000/offers")
       .then((res) => res.json())
       .then((data) => setOffers(data));
   }, []);
@@ -21,7 +21,7 @@ const Offers = () => {
     <Container>
       <Row xs={12} md={4} className="g-5 mt-2" >
         {offers.map((offer) => (
-          <Offer key={offer.id} offer={offer}></Offer>
+          <Offer key={offer._id} offer={offer}></Offer>
         ))}
       </Row>
     </Container>

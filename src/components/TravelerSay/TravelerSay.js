@@ -16,9 +16,8 @@ const TravelerSay = () => {
         <Card.Img variant="top" className="img-fluid" style={{  borderRadius:"50%" }} src="https://i.ibb.co/PrxsPbY/user1.png" />
         <Card.Body className="text-center">
           <Card.Title> <span className="orange">Alizabeth Turner</span> </Card.Title>
-          <div className="text-muted"><i class="fas fa-quote-left"></i></div>
-          <Card.Text style={{ textAlign: "justify" }}> <em className="text-muted"> Really very good experience with them!</em></Card.Text>
-          <div className="text-muted"><i class="fas fa-quote-right"></i></div>
+         
+          <Card.Text style={{ textAlign: "justify" }}><em className="text-muted"> <i class="fas fa-quote-left"></i> Really very good experience with them!<i class="fas fa-quote-right p-2"></i>  </em></Card.Text>
         </Card.Body>
         
        
@@ -30,9 +29,9 @@ const TravelerSay = () => {
         <Card.Img variant="top" style={{borderRadius:"50%" }} src="https://i.ibb.co/YcCZwhC/user2.png" />
         <Card.Body className="text-center">
           <Card.Title > <span className="orange">Zunayed Jomsher</span> </Card.Title>
-          <div className="text-muted"><i class="fas fa-quote-left"></i></div>
-          <Card.Text style={{ textAlign: "justify" }}><em className="text-muted">Very trustworthy service and Really enjoy it!</em></Card.Text>
-          <div className="text-muted"><i class="fas fa-quote-right"></i></div>
+         
+          <Card.Text style={{ textAlign: "justify" }}><em className="text-muted"> <i class="fas fa-quote-left"></i> Very trustworthy service and Really enjoy it! <i class="fas fa-quote-right p-2"></i> </em></Card.Text>
+          
         </Card.Body>
         
        
@@ -44,9 +43,9 @@ const TravelerSay = () => {
         <Card.Img variant="top" style={{borderRadius:"50%" }} src="https://i.ibb.co/WVQ2gf7/user3.png" />
         <Card.Body className="text-center">
           <Card.Title><span className="orange">Captain Barbosa</span> </Card.Title>
-          <div className="text-muted"><i class="fas fa-quote-left"></i></div>
-          <Card.Text style={{ textAlign: "justify" }}><em className="text-muted">Their services and offers are so enjoyable!</em></Card.Text>
-          <div className="text-muted"><i class="fas fa-quote-right"></i></div>
+          
+          <Card.Text style={{ textAlign: "justify" }}><em className="text-muted"> <i class="fas fa-quote-left"></i> Their services and offers are so enjoyable!<i class="fas fa-quote-right p-2"></i>  </em></Card.Text>
+          
         </Card.Body>
         
        
