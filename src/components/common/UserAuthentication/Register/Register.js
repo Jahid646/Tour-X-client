@@ -2,7 +2,6 @@
 import { Card, Col, Container, Row,Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { NavLink, useHistory, useLocation } from "react-router-dom";
-import logo from "../../../../images/logo2.png";
 
 
 import useAuth from "../../../../hooks/useAuth";

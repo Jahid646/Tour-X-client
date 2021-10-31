@@ -31,7 +31,7 @@ const MyOrdes = () => {
     };
     return (
         <div>
-            <h2>my orders</h2> <hr/>
+            <h2 className="orange text-center">My Orders</h2> <hr/>
 {
               myOrders.map(order => 
             <Container key={order._id} className="py-5">
@@ -45,6 +45,10 @@ const MyOrdes = () => {
                     <Card.Text>{order.offer.description}</Card.Text>
                     <Card.Text className="fs-1 orange fw-bold">
                       $ <span id="">{order.offer.price}</span>
+                    </Card.Text>
+
+                    <Card.Text className="fs-1 orange fw-bold">
+                       <span >{order.status}</span>
                     </Card.Text>
                     <Button variant="outline-danger" className="orange rounded-pill" onClick={ ()=> handleRemove(order._id)}>
                         Remove Order

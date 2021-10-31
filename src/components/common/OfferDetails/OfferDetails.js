@@ -1,6 +1,5 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Card, Col, Container, Row, Button, Modal } from "react-bootstrap";
+import { Card, Col, Container, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router";
 import useAuth from "../../../hooks/useAuth";
@@ -35,6 +34,7 @@ const OfferDetails = () => {
   const onSubmit = (data) => {
     data.offer = singleOffer;
     data.uid = user.uid;
+    data.status = 'Pending';
     fetch("http://localhost:5000/orders", {
       method: "POST",
       headers: {

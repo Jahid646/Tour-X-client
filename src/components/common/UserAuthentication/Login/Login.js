@@ -3,7 +3,6 @@ import { Card, Col, Container, Row, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useHistory, useLocation, NavLink } from "react-router-dom";
 import useAuth from "../../../../hooks/useAuth";
-import logo from "../../../../images/logo.png";
 
 
 
