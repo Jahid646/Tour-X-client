@@ -7,7 +7,7 @@ const MyOrdes = () => {
     const [myOrders, setMyOrders] = useState([]);
     useEffect(()=>{
 
-        fetch(`http://localhost:5000/order/${user.uid}`)
+        fetch(`https://frightening-witch-07508.herokuapp.com/order/${user.uid}`)
         .then(res => res.json())
         .then(data => setMyOrders(data));
     }, [])
@@ -15,7 +15,7 @@ const MyOrdes = () => {
     const handleRemove =(id) =>{
         const process = window.confirm("Do You Want to Remove this Order?");
         if(process){
-            fetch(`http://localhost:5000/order/${id}`,{
+            fetch(`https://frightening-witch-07508.herokuapp.com/order/${id}`,{
                 method: "DELETE",
             })
             .then(res => res.json())

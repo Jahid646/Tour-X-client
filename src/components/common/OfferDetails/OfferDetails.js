@@ -18,7 +18,7 @@ const OfferDetails = () => {
 
   useEffect(() => {
     fetch(
-      `http://localhost:5000/offers/${id}`
+      `https://frightening-witch-07508.herokuapp.com/offers/${id}`
     )
       .then((res) => res.json())
       .then((data) =>
@@ -35,7 +35,7 @@ const OfferDetails = () => {
     data.offer = singleOffer;
     data.uid = user.uid;
     data.status = 'Pending';
-    fetch("http://localhost:5000/orders", {
+    fetch("https://frightening-witch-07508.herokuapp.com/orders", {
       method: "POST",
       headers: {
         "content-type": "application/json",

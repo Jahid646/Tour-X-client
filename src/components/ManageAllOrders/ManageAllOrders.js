@@ -10,13 +10,13 @@ const ManageAllOrders = () => {
   const { _id } = offers;
 
   useEffect(() => {
-    fetch("http://localhost:5000/all-orders")
+    fetch("https://frightening-witch-07508.herokuapp.com/all-orders")
       .then((res) => res.json())
       .then((data) => setOffers(data));
   }, [offers]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/single-order/${_id}`)
+    fetch(`https://frightening-witch-07508.herokuapp.com/single-order/${_id}`)
       .then((res) => res.json())
       .then((data) => setSingleOffer(data));
   }, []);
@@ -27,7 +27,7 @@ const ManageAllOrders = () => {
     newOffer.status = newStatus;
     setSingleOffer(newOffer);
 
-    fetch(`http://localhost:5000/order-status/${_id}`, {
+    fetch(`https://frightening-witch-07508.herokuapp.com/order-status/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -39,7 +39,7 @@ const ManageAllOrders = () => {
   };
 
   const handleDelete = (id) => {
-    const url = `http://localhost:5000/order/${_id}`;
+    const url = `https://frightening-witch-07508.herokuapp.com/order/${_id}`;
     fetch(url, {
       method: "DELETE",
     })

@@ -6,7 +6,7 @@ import Offer from "../Offer/Offer";
 const Offers = () => {
   const [offers, setOffers] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/offers")
+    fetch("https://frightening-witch-07508.herokuapp.com/offers")
       .then((res) => res.json())
       .then((data) => setOffers(data));
   }, []);
