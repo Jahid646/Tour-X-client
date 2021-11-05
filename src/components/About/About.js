@@ -4,21 +4,21 @@ import { Col, Container, Row } from 'react-bootstrap';
 const About = () => {
     return (
         <div>
-            <Container className="border mt-5 pt-5 pb-5 mb-5">
+            <Container className=" mt-5 pt-5 pb-5 mb-5">
         <Row>
-          <Col className="text-center mt-5 pt-5">
+          <Col md={6} xs={12} className="text-center mt-5 pt-5">
             <div>
               <img
-                className=""
-                height="500"
+                className="img-fluid"
+                height="350"
                 src="https://www.tourx-react.egenslab.com/static/media/about-1.bcfbc984.png"
                 alt=""
               />
             </div>
           </Col>
-          <Col className=" mt-5 pt-5">
+          <Col  md={6} xs={12}className=" mt-5 pt-5">
             <div>
-              <div className="text-center mt-5 pt-5">
+              <div className="text-center">
                 <h3>
                   About<span className="orange"> Tour-X</span>
                 </h3>

@@ -5,7 +5,7 @@ import { Table, Button, Container } from "react-bootstrap";
 
 const ManageAllOrders = () => {
   const [offers, setOffers] = useState([]);
-  const [singleOffer, setSingleOffer] = useState({});
+  const [singleOffer, setSingleOffer] = useState([]);
 
   const { _id } = offers;
 
@@ -38,8 +38,12 @@ const ManageAllOrders = () => {
       .then((data) => console.log(data));
   };
 
+  
   const handleDelete = (id) => {
-    const url = `https://frightening-witch-07508.herokuapp.com/order/${_id}`;
+    const process = window.confirm("Do You Want to Remove this Order?");
+    if(process){
+
+      const url = `https://frightening-witch-07508.herokuapp.com/order/${id}`;
     fetch(url, {
       method: "DELETE",
     })
@@ -52,6 +56,8 @@ const ManageAllOrders = () => {
           setSingleOffer(remaining);
         }
       });
+    }
+    
   };
 
   return (
@@ -60,7 +66,7 @@ const ManageAllOrders = () => {
         <h2 className="orange text-center">Manage Order</h2>
       {
         <div>
-          <Table striped bordered hover size="sm">
+          <Table striped bordered hover size="sm" responsive="sm">
             <thead>
               <tr>
                 <th>Offer Name</th>
